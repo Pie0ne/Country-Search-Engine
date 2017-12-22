@@ -1,0 +1,38 @@
+body {
+	background-color: #34495e;
+	color: #fff;
+	width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+}
+
+li {
+	list-style-type: none;
+}
+
+h1 {
+	padding-top: 50px;
+	font-size: 50px;
+}
+
+ul {
+	padding-left: 0;
+}
+
+button {
+	background-color: #91804B;
+	color: #fff;
+	border: 1px solid #91804B;
+	font-size: 16px;
+	cursor: pointer;
+	padding: 9px;
+}
+input {
+	padding: 10px 0;
+	margin-top: 20px;
+}
+
+h2 {
+	padding-top: 20px;
+}
