@@ -20,8 +20,12 @@ function searchCountries() {
 }
 
 function showCountriesList(resp) {
-  countriesList.empty();
-	  resp.forEach(function(item){
+	countriesList.empty();
+	capitalsList.empty();
+	populationList.empty();
+	languageList.empty();
+	landAreaList.empty();
+	resp.forEach(function(item){
 	   	$('<li>').text(item.name).appendTo(countriesList);
 	   	$('<li>').text(item.capital).appendTo(capitalsList);
 	   	$('<li>').text(item.population).appendTo(populationList);
