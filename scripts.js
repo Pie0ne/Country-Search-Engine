@@ -1,11 +1,13 @@
 
 var url = 'https://restcountries.eu/rest/v1/name/';
 var countriesList = $('#countries');
-var urlCapitalCity = 'https://restcountries.eu/rest/v2/capital/';
 var capitalsList = $('#capitals');
+var populationList = $('#population');
+var languageList = $('#language');
+var landAreaList = $('#land-area');
+
 
 $('#search').click(searchCountries);
-
 
 function searchCountries() {
 	var countryName= $('#country-name').val();
@@ -21,23 +23,12 @@ function showCountriesList(resp) {
   countriesList.empty();
 	  resp.forEach(function(item){
 	   	$('<li>').text(item.name).appendTo(countriesList);
+	   	$('<li>').text(item.capital).appendTo(capitalsList);
+	   	$('<li>').text(item.population).appendTo(populationList);
+	   	$('<li>').text(item.languages).appendTo(languageList);
+	   	$('<li>').text(item.area).appendTo(landAreaList);
 	});
 }
-
-function searchCapitals() {
-	$.ajax({
-		url: urlCapitalCity,
-		method: 'GET',
-		success: showCapitalsList
-	});
-}
-
-function showCapitalsList(resp) {
-	capitalsList.empty();
-		resp.forEach(function(item){
-	   		$('<li>').text(item.name).appendTo(capitalsList);
-		});
-	}
 
 
 
