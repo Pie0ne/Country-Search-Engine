@@ -1,1 +1,1 @@
-# Country-Search-Engine
+# Country searcher, JavaScript nad API used.
